@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 0.5em 0.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5em;
+}
+
+h1 {
+    color: black;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.home-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.home-icon:hover {
+    opacity: 0.8;
+}
+
+.home-icon:active {
+    transform: scale(0.9);
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    padding: 2.5em 0.5em 3.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.input-group1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.input-label {
+    font-weight: 600;
+}
+
+textarea {
+    width: clamp(0em, 80vw, 40em);
+    height: 100%;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    resize: none;
+    color: black;
+    background-color: white;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 1), inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-group2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+input[type="color"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    width: 63px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: text;
+}
+
+select {
+    width: 60px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.btn {
+    cursor: pointer;
+    padding: 1em;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#qrCode {
+    flex-grow: 1;
+    background-color: white;
+    width: clamp(0em, 75vw, 15em);
+    height: clamp(0em, 75vw, 15em);
+    /* padding: 1em; */
+    border: 2px dashed black;
+    border-radius: 7px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    transition: box-shadow 0.3s ease;
+}
+
+#qrCode:hover {
+    box-shadow: 15px 15px 0 rgba(0, 0, 0, 1);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    width: 100%;
+    padding: 0.7em;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+footer a {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
